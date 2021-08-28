@@ -1,19 +1,23 @@
 from django.db import models
 
 portals = (
-    ('ndtv.com', 'ndtv.com'),
-    ('soundcloud.com', 'soundcloud.com'),
-    ('https://www.amazon.in', 'https://www.amazon.in'),
+    ('ndtv', 'ndtv'),
+    ('soundcloud', 'soundcloud'),
+    ('amazon', 'amazon'),
+    ('internshala', 'internshala'),
+    ('iimjobs', 'iimjobs'),
+    ('talentrack', 'talentrack'),
 )
 
 
-
-
 class Article(models.Model):
-    portal = models.CharField(max_length=100, choices=portals)
-    title = models.CharField(max_length=256)
+    portal = models.CharField(max_length=1000, choices=portals)
+    title = models.CharField(max_length=1000)
     date_created = models.DateTimeField(auto_now_add=True)
     url = models.URLField()
+
+    class Meta:
+        ordering = ['-id']
 
     def __str__(self):
         return f'{self.portal} - {self.title}'
