@@ -22,7 +22,7 @@ Non_interesting_url should contain “all the other” URLs from the website
 ```
 
 ## Homepage 
-<img src="vhome.jpg" >
+<img src="home.jpg" >
 
 ## internshala.com
 <img src="pic/internshala.jpg" >
